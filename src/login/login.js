@@ -27,7 +27,7 @@ class LoginComponent extends React.Component {
 
     const { classes } = this.props;
 
-    return(
+    return (
       <main className={classes.main}>
         <CssBaseline></CssBaseline>
         <Paper className={classes.paper}>
@@ -39,15 +39,15 @@ class LoginComponent extends React.Component {
             </FormControl>
             <FormControl required fullWidth margin='normal'>
               <InputLabel htmlFor="login-password-input">Enter Your Password</InputLabel>
-              <Input type="password"  id="login-password-input" onChange={(e) => this.userTyping('password', e)}></Input>
+              <Input type="password" id="login-password-input" onChange={(e) => this.userTyping('password', e)}></Input>
             </FormControl>
             <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Log In</Button>
           </form>
           {
             // If loginError is set then the error text is displayed otherwise it is skipped
-            this.state.loginError ? 
-            <Typography className={classes.errorText} component="h5" variant="h6">Incorrect Login Information</Typography> :
-            null
+            this.state.loginError ?
+              <Typography className={classes.errorText} component="h5" variant="h6">Incorrect Login Information</Typography> :
+              null
           }
           <Typography component="h5" variant="h6" className={classes.noAccountHeader}>Don't Have An Account?</Typography>
           <Link className={classes.signUpLink} to="/signup">Sign Up</Link>
@@ -66,7 +66,7 @@ class LoginComponent extends React.Component {
       case 'password':
         this.setState({ password: e.target.value });
         break;
-    
+
       default:
         break;
     }
@@ -82,7 +82,7 @@ class LoginComponent extends React.Component {
       .signInWithEmailAndPassword(this.state.email, this.state.password) // Logs the user in based on email and password
       .then(() => {
         // If login is successful then user is redirected to the dashboard page
-        this.props.history.push('/dashboard'); 
+        this.props.history.push('/dashboard');
       }, err => {
         // Error handling for login error
         this.setState({ loginError: 'Server error' });
