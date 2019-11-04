@@ -1,6 +1,6 @@
 # **Instant Messenger App Tutorial**
 
-## [Hosted Version](https://react-im-app.netlify.com/?_ga=2.18316784.891298360.1572849078-142647001.1572849078)
+## [Hosted Version](https://react-im-app.netlify.com/)
 
 ## _Added features post tutorial_
 
