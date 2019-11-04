@@ -1,126 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Instant Messenger App Tutorial**
 
-## Available Scripts
+## [Hosted Version](https://react-im-app.netlify.com/?_ga=2.18316784.891298360.1572849078-142647001.1572849078)
 
-In the project directory, you can run:
+## _Added features post tutorial_
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
----
----
-
-## *Added features post tutorial*
 - Time and date of chat message submission displayed at top of chat message
 
-## *Ideas for new features*
+## _Ideas for new features_
+
 - Delete chat?
 - Set avatar
 
 ---
----
 
 ## **Router**
+
 ### **Installing the React Router**
+
 In Git terminal for the project folder type:
-```
+
+```git
 npm install react-router-dom
 ```
+
 ### **Importing the router**
+
 In index.js ad the following import line to the file:
+
 ```js
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import {
+  Route,
+  BrowserRouter as Router
+} from 'react-router-dom';
 ```
+
 ### **Create the route object**
-Crete a routing object to be used for the ReactDOM render function. 
+
+Crete a routing object to be used for the ReactDOM render function.
 Example from IM tutorial:
+
 ```js
 const routing = (
   <Router>
-    <div id="routing-container">
-      <Route path="/login" component={LoginComponent}></Route>
-      <Route path="/signup" component={SignupComponent}></Route>
-      <Route path="/dashboard" component={DashboardComponent}></Route>
+    <div id='routing-container'>
+      <Route
+        path='/login'
+        component={LoginComponent}
+      ></Route>
+      <Route
+        path='/signup'
+        component={SignupComponent}
+      ></Route>
+      <Route
+        path='/dashboard'
+        component={DashboardComponent}
+      ></Route>
     </div>
   </Router>
 );
 ```
+
 Then add it to the render as follows:
+
 ```js
 ReactDOM.render(routing, document.getElementById('root'));
 ```
 
 ## **Firebase**
+
 ### **Installing Firebase**
+
 In Git terminal for the project folder type:
-```
+
+```git
 npm install firebase@6.0.2
 ```
 
 ## **Material UI**
+
 ### **Installing the Material UI**
-in Git terminal for the project folder type:
-```
+
+In Git terminal for the project folder type:
+
+```git
 npm install @material-ui/core
 npm install @material-ui/icons
 ```
